@@ -1,0 +1,14 @@
+<h1>Posts</h1>
+<li  [ngClass]="{'list-group-item':true,'list-group-item-success':[loveIts]>[dontLove] && [loveIts]>0,'list-group-item-danger':[dontLove]>[loveIts] && [dontLove]>0}">
+  <h2>{{title}} <span style="position: absolute;right: 20px;">{{create_at | date : 'short'}}</span></h2>
+  <p>{{content}}</p>
+  <button class="btn btn-success" (click)="onLove()">Love It!</button>&nbsp;&nbsp;
+  <button class="btn btn-danger" (click)="onDontLove()">Don't love It!</button>
+  <button class="btn btn-danger" (click)="onDelete()">Supprimer Post</button>
+  <a [routerLink]="[id]">Détails</a>
+  <span style="position: absolute;right: 20px;">
+    <span class="glyphicon glyphicon-thumbs-up" style="color:blue">
+    </span><button>{{loveIts}}</button>&nbsp;
+    <span class="glyphicon glyphicon-thumbs-down" style="color:red;"></span>
+    <button>{{dontLove}}</button> </span>
+</li>
