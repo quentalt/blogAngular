@@ -1,1 +1,1 @@
-blogAngular
+Blog à deux en Angular
